@@ -4,7 +4,7 @@
  */
 var sortColors = function(nums) {
     let temp
-    for(let i = 0; i < nums.length;i++){
+     for(let i = 0; i < nums.length;i++){
         for(let j = 0; j < nums.length;j++){
         if(nums[j]>nums[j+1]){
             temp = nums[j];
@@ -12,8 +12,8 @@ var sortColors = function(nums) {
             nums[j+1]=temp
         }
         }
-       
-    }
+}
+   
     
     return nums
 };
