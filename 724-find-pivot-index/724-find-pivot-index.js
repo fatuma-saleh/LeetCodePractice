@@ -5,8 +5,8 @@
 var pivotIndex = function(nums) {
     let suml=0,tot=0;
     
-    for(let i=0;i<nums.length;i++){
-        tot+=nums[i]
+    for(let num of nums){
+        tot+=num
     }
           for(let i=0;i<nums.length;i++){
            const sumr=tot-suml-nums[i]
