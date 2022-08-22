@@ -3,16 +3,16 @@
  * @return {number}
  */
 var longestPalindrome = function(s) {
-     const isCharOdd = []
-    let oddsCounter = 0
-    for (const char of s) {
-        if (isCharOdd[char]) {
-            isCharOdd[char] = false
-            oddsCounter--
-        } else {
-            isCharOdd[char] = true
-            oddsCounter++
+    let count = {},sum = 0;
+    for(let i = 0;i< s.length;i++){
+        let ch = s[i]
+        if(ch in count){
+           sum +=2
+            delete count[ch]
+            continue;
+            
         }
+        count[ch] = 1
     }
-    return oddsCounter ? s.length - oddsCounter + 1 : s.length
+   return s.length > sum ? sum + 1: sum
 };
