@@ -9,8 +9,9 @@ var searchRange = function(nums, target) {
         if(nums[i] === target){
            let pos = i
         
-        while(pos < nums.length && nums[pos]===target)
+        while(pos < nums.length && nums[pos]===target){
             pos++
+        }
         return [ i, pos-1 ]
         }
     }
