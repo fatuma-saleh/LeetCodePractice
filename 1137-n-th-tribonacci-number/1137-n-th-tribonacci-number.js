@@ -8,10 +8,10 @@ var tribonacci = function(n) {
         return n
     }
     for(let i=3;i<=n;i++){
-        let num = num1+num2+num3;
+        let temp = num1+num2+num3;
         num1=num2;
         num2=num3;
-        num3=num;
+        num3=temp;
     }
     return num3
 };
