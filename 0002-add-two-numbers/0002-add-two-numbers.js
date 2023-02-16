@@ -20,7 +20,8 @@ var addTwoNumbers = function(l1, l2) {
         l1=l1?.next;
         l2=l2?.next;
 
-        carry = sum > 9 ? 1 : 0;
+        //carry = sum > 9 ? 1 : 0;
+        carry = Math.floor(sum/10);
         curr.next = new ListNode(sum % 10);
         curr = curr.next;
     }
