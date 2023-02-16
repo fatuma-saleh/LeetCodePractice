@@ -25,7 +25,7 @@ var addTwoNumbers = function(l1, l2) {
         curr = curr.next;
     }
 
-    if(!!carry) {
+    if(carry) {
         curr.next = new ListNode(1);
     }
     return p.next;
